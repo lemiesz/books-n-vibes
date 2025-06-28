@@ -1,50 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Greedy Tamales</title>
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-<style>
-  body {
-    background: linear-gradient(to bottom right, #0f0f0f, #2c2c2c);
-  }
-  .glass {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 1rem;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greedy Tamales - Overpriced and worth every bite</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.4/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Montserrat', sans-serif; }
+  </style>
 </head>
-<body class="text-white font-sans">
-  <header class="text-center py-20">
-    <h1 class="text-6xl font-extrabold mb-4">Greedy Tamales</h1>
-    <p class="text-2xl max-w-xl mx-auto">Overpriced—and worth every bite.</p>
+<body class="bg-gray-50 text-gray-800">
+  <header class="relative min-h-screen flex items-center justify-center text-center text-white">
+    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80" alt="Plate of gourmet tamales" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-black opacity-60"></div>
+    <div class="relative z-10 max-w-3xl mx-auto p-6">
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-4">Greedy Tamales</h1>
+      <p class="text-xl md:text-2xl mb-6">Overpriced—and worth every bite.</p>
+      <a href="#signup" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-6 rounded">Join our launch list</a>
+    </div>
   </header>
-  <main class="max-w-3xl mx-auto grid gap-16 pb-20">
-    <section class="glass p-8 text-center">
-      <h2 class="text-3xl font-semibold mb-4">Seattle’s Craft Tamales</h2>
-      <p class="text-lg">Bringing heirloom masa, chef-driven fillings, and playful packaging to Seattle’s food scene. We celebrate the tamale tradition with a cheeky twist that has foodies lining up for a taste.</p>
+  <main class="py-16">
+    <section class="max-w-5xl mx-auto px-4 grid md:grid-cols-3 gap-8">
+      <div class="text-center p-6 bg-white shadow-md rounded-lg">
+        <svg class="w-12 h-12 mx-auto text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a5 5 0 00-5 5v1H4a2 2 0 00-2 2v7a2 2 0 002 2h12a2 2 0 002-2v-7a2 2 0 00-2-2h-1V7a5 5 0 00-5-5z"/></svg>
+        <h3 class="mt-4 mb-2 text-xl font-semibold">Heirloom Masa</h3>
+        <p>Our tamales start with time-honored maize varieties for unrivaled flavor and texture.</p>
+      </div>
+      <div class="text-center p-6 bg-white shadow-md rounded-lg">
+        <svg class="w-12 h-12 mx-auto text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M17.582 10.54l-7.42-7.42a1.78 1.78 0 00-2.524 0l-7.42 7.42a1.79 1.79 0 000 2.524l7.42 7.42a1.78 1.78 0 002.524 0l7.42-7.42a1.79 1.79 0 000-2.524z"/></svg>
+        <h3 class="mt-4 mb-2 text-xl font-semibold">Chef‑Driven Fillings</h3>
+        <p>Bold seasonal combinations created by local chefs keep every bite exciting.</p>
+      </div>
+      <div class="text-center p-6 bg-white shadow-md rounded-lg">
+        <svg class="w-12 h-12 mx-auto text-yellow-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm5 13H7v-2h10v2z"/></svg>
+        <h3 class="mt-4 mb-2 text-xl font-semibold">Transparent Pricing</h3>
+        <p>We’re cheeky about being pricey, but we source ethically and pay fairly.</p>
+      </div>
     </section>
-    <section class="glass p-8">
-      <h2 class="text-3xl font-semibold mb-6 text-center">Why Greedy?</h2>
-      <ul class="space-y-4 list-disc list-inside text-lg">
-        <li>Gourmet-level tamales, steeped in tradition but dressed for Instagram.</li>
-        <li>Bold, limited-edition flavors that rotate with the seasons.</li>
-        <li>Ethical sourcing and transparent pricing.</li>
-      </ul>
-    </section>
-    <section class="glass p-8 text-center" id="signup">
-      <h2 class="text-3xl font-semibold mb-4">Join the Launch List</h2>
-      <p class="mb-6 text-lg">Be first to know when Greedy Tamales hit Seattle markets. Sign up for early announcements and exclusive offers.</p>
+    <section id="signup" class="max-w-2xl mx-auto mt-20 bg-white p-8 shadow-md rounded-lg text-center">
+      <h2 class="text-3xl font-bold mb-4">Get a taste first</h2>
+      <p class="mb-6">Be first to know when Greedy Tamales hit Seattle markets. Sign up for early announcements and exclusive offers.</p>
       <form action="#" method="post" class="flex flex-col sm:flex-row justify-center gap-4">
-        <input type="email" name="email" placeholder="Your email" required class="p-3 rounded text-gray-900 flex-grow">
+        <input type="email" name="email" placeholder="Your email" required class="border p-3 rounded flex-grow">
         <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-6 rounded">Sign Up</button>
       </form>
     </section>
   </main>
+  <footer class="py-6 text-center text-gray-600 text-sm">
+    &copy; <span id="year"></span> Greedy Tamales Co. All rights reserved.
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
