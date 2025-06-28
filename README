@@ -1,0 +1,5 @@
+# Greedy Tamales Landing Page
+
+This repository contains a simple marketing site for **Greedy Tamales**, a Seattle brand bringing premium tamales to the city's craft-food scene.
+
+Open `index.html` in your browser to view the landing page and sign up form. Styling is provided by [Tailwind CSS](https://tailwindcss.com/) via CDN.
