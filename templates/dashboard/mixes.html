@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Your Mixes</h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload</button>
+</form>
+<hr>
+<ul>
+{% for mix in mixes %}
+    <li>
+        <a href="/mix/{{ mix.slug }}/">{{ mix.title }}</a>
+        <form method="post" style="display:inline;">
+            {% csrf_token %}
+            <input type="hidden" name="delete_id" value="{{ mix.id }}">
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+{% empty %}
+    <li>No mixes yet.</li>
+{% endfor %}
+</ul>
+{% endblock %}
