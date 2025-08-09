@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Featured DJs</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add</button>
+</form>
+<ul>
+{% for item in featured %}
+    <li>
+        <a href="/u/{{ item.linked.username }}/">{{ item.linked.username }}</a>
+        <form method="post" style="display:inline;">
+            {% csrf_token %}
+            <input type="hidden" name="delete_id" value="{{ item.id }}">
+            <button type="submit">Remove</button>
+        </form>
+    </li>
+{% empty %}
+    <li>No featured DJs.</li>
+{% endfor %}
+</ul>
+{% endblock %}

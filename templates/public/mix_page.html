@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{{ mix.title }}</h1>
+<p>by <a href="/u/{{ mix.dj.username }}/">{{ mix.dj.username }}</a></p>
+{% if mix.cover %}<img src="{{ mix.cover.url }}" alt="cover" width="200">{% endif %}
+<audio controls src="{{ mix.audio.url }}"></audio>
+<p>{{ mix.description }}</p>
+<p>Plays: {{ mix.play_count }}</p>
+{% endblock %}
